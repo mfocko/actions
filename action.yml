@@ -9,8 +9,7 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v2
-    - uses: 'docker://quay.io/packit/packit'
-      entrypoint: 'packit srpm'
+    - uses: 'docker://Dockerfile'
     - uses: actions/upload-artifact@v2
       with:
         name: SRPM package
