@@ -9,10 +9,7 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
-      with:
-        repository: mfocko/actions@v2
-    - uses: './.github/actions/packit-srpm'
+    - uses: mfocko/actions/.github/actions/packit-srpm@packit-action
     - uses: actions/upload-artifact@v2
       with:
         name: SRPM package
