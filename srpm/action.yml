@@ -1,0 +1,11 @@
+name: Packit build
+description: Action that provides Packit pipeline
+inputs:
+  srpm:
+    description: Whether to run SRPM build
+    required: false
+    default: true
+runs:
+  using: "docker"
+  image: 'Dockerfile'
+
