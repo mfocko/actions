@@ -2,4 +2,4 @@ name: Check conventional commits
 description: Checks all commits on PR if they satisfy conventional commits
 runs-on: ubuntu-latest
 steps:
-  - run: git log ${{ github.event.base.sha }}..${{ github.event.head.sha }}
+  - run: git log $GITHUB_BASE_REF..$GITHUB_REF
